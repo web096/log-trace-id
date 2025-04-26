@@ -80,9 +80,9 @@ public class ResponseAdvice implements ResponseBodyAdvice<Object> {
 
         /*
         Spring 에서 @RestController 또는 @ResponseBody를 사용하는 경우,
-        Java 객체(Object) -> JSON(String)으로 변활할 떄는 HttpMessageConverter가 필요하다.
+        Java 객체(Object) -> JSON(String)으로 변환할 때는 HttpMessageConverter가 필요하다.
         String 타입은 HttpMessageConverter가 StringHttpMessageConverter로 따로 처리하는데,
-        CommonResponseAdvice에서 CommonResponse로 감싸기 때문에 return값이 String일 경우, ClassCastException이 발생한다.
+        CommonResponseAdvice에서 CommonBody로 감싸기 때문에 return값이 String일 경우, 변환해야할 spring타입이 CommonBody라는 객체로 변경되어 있기 때문에 ClassCastException이 발생한다.
         String일 경우 따로 JSON으로 변환해주는 처리를 해준다.
         */
         if (body instanceof String) {

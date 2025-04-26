@@ -31,7 +31,7 @@ public class HelloController {
         // 여기서는 그냥 테스트용으로 가짜 데이터 리턴
         UserDto user = new UserDto(id, "홍길동", "hong@example.com");
 
-        // Controller에서도 ResponseEntity 직접 리턴 (권장)
+        // Controller에서도 ResponseEntity 직접 리턴
         return resultResponse.success(user);
     }
 
