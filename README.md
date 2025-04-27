@@ -1,4 +1,4 @@
-# Spring Boot API Response 표준화 DEMO
+# Spring Boot API Response DEMO
 
 > Java 17 + Spring Boot 기반으로 "traceId 기반 통합 API 응답 시스템"을 구축한 프로젝트입니다.
 
